@@ -17,8 +17,8 @@ Login To Website
 
     # Nhấn nút đăng nhập
     Click Button  //*[@class="ant-btn ant-btn-primary"]
-    
+    # Chờ đợi trang Dashboard tải xong và kiểm tra sự xuất hiện của văn bản 'Dashboard'
+    Wait Until Page Contains    Dashboard    10s
     # Xác minh login thành công
-    Page Should Contain Element  //*[@class="ant-menu-item ant-menu-item-selected"]
-    Sleep    10
+    Page Should Contain   Dashboard
     Close Browser

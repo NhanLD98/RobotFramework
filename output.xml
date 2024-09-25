@@ -1,78 +1,78 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.1 (Python 3.12.6 on win32)" generated="2024-09-24T22:07:22.444567" rpa="false" schemaversion="5">
-<suite id="s1" name="pythonProject" source="C:\Users\TechCare\PycharmProjects\pythonProject">
-<suite id="s1-s1" name="Test" source="C:\Users\TechCare\PycharmProjects\pythonProject\Test">
-<suite id="s1-s1-s1" name="Test" source="C:\Users\TechCare\PycharmProjects\pythonProject\Test\test">
-<suite id="s1-s1-s1-s1" name="Open Website" source="C:\Users\TechCare\PycharmProjects\pythonProject\Test\test\open website.robot">
+<robot generator="Robot 7.1 (Python 3.12.6 on darwin)" generated="2024-09-25T11:15:40.983985" rpa="false" schemaversion="5">
+<suite id="s1" name="RobotFramework" source="/Users/nexroot/Desktop/RobotFramework/RobotFramework">
+<suite id="s1-s1" name="Test" source="/Users/nexroot/Desktop/RobotFramework/RobotFramework/Test">
+<suite id="s1-s1-s1" name="Test" source="/Users/nexroot/Desktop/RobotFramework/RobotFramework/Test/test">
+<suite id="s1-s1-s1-s1" name="Open Website" source="/Users/nexroot/Desktop/RobotFramework/RobotFramework/Test/test/open website.robot">
 <test id="s1-s1-s1-s1-t1" name="Login To Website" line="10">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-09-24T22:07:22.694507" level="INFO">Opening browser 'chrome' to base url 'https://beahub-web-v1006.devcaprover.nexlesoft.com/'.</msg>
+<msg time="2024-09-25T11:15:41.279467" level="INFO">Opening browser 'chrome' to base url 'https://beahub-web-v1006.devcaprover.nexlesoft.com/'.</msg>
 <arg>${URL}</arg>
 <arg>chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-09-24T22:07:22.694507" elapsed="6.714740"/>
+<status status="PASS" start="2024-09-25T11:15:41.279170" elapsed="3.698653"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2024-09-24T22:07:29.410282" elapsed="0.032582"/>
+<status status="PASS" start="2024-09-25T11:15:44.979264" elapsed="0.403583"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-09-24T22:07:29.443861" level="INFO">Typing text 'merchantowner' into text field 'id=horizontal_login_username'.</msg>
+<msg time="2024-09-25T11:15:45.384202" level="INFO">Typing text 'merchantowner' into text field 'id=horizontal_login_username'.</msg>
 <arg>id=horizontal_login_username</arg>
 <arg>${USERNAME}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-09-24T22:07:29.442864" elapsed="0.227910"/>
+<status status="PASS" start="2024-09-25T11:15:45.383263" elapsed="0.412804"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-09-24T22:07:29.671771" level="INFO">Typing text '12345678' into text field 'id=horizontal_login_password'.</msg>
+<msg time="2024-09-25T11:15:45.796927" level="INFO">Typing text '12345678' into text field 'id=horizontal_login_password'.</msg>
 <arg>id=horizontal_login_password</arg>
 <arg>${PASSWORD}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-09-24T22:07:29.670774" elapsed="0.157265"/>
+<status status="PASS" start="2024-09-25T11:15:45.796478" elapsed="0.148206"/>
 </kw>
 <kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2024-09-24T22:07:29.828398" level="INFO">Clicking button '//*[@class="ant-btn ant-btn-primary"]'.</msg>
+<msg time="2024-09-25T11:15:45.945408" level="INFO">Clicking button '//*[@class="ant-btn ant-btn-primary"]'.</msg>
 <arg>//*[@class="ant-btn ant-btn-primary"]</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2024-09-24T22:07:29.828398" elapsed="0.112751"/>
+<status status="PASS" start="2024-09-25T11:15:45.945134" elapsed="0.117772"/>
 </kw>
-<kw name="Page Should Contain Element" owner="SeleniumLibrary">
-<msg time="2024-09-24T22:07:30.931898" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
-<msg time="2024-09-24T22:07:30.931898" level="FAIL">Page should have contained element '//*[@class="ant-menu-item ant-menu-item-selected"]' but did not.</msg>
-<arg>//*[@class="ant-menu-item ant-menu-item-selected"]</arg>
-<doc>Verifies that element ``locator`` is found on the current page.</doc>
-<status status="FAIL" start="2024-09-24T22:07:29.941149" elapsed="0.993035">Page should have contained element '//*[@class="ant-menu-item ant-menu-item-selected"]' but did not.</status>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Dashboard</arg>
+<arg>10s</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2024-09-25T11:15:46.063398" elapsed="0.450930"/>
 </kw>
-<kw name="Sleep" owner="BuiltIn">
-<arg>10</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="NOT RUN" start="2024-09-24T22:07:30.935169" elapsed="0.000000"/>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2024-09-25T11:15:46.525927" level="INFO">Current page contains text 'Dashboard'.</msg>
+<arg>Dashboard</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2024-09-25T11:15:46.514600" elapsed="0.011435"/>
 </kw>
 <kw name="Close Browser" owner="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="NOT RUN" start="2024-09-24T22:07:30.936166" elapsed="0.000000"/>
+<status status="PASS" start="2024-09-25T11:15:46.526289" elapsed="0.133899"/>
 </kw>
-<status status="FAIL" start="2024-09-24T22:07:22.694507" elapsed="8.241659">Page should have contained element '//*[@class="ant-menu-item ant-menu-item-selected"]' but did not.</status>
+<status status="PASS" start="2024-09-25T11:15:41.278155" elapsed="5.383092"/>
 </test>
-<status status="FAIL" start="2024-09-24T22:07:22.475811" elapsed="8.462351"/>
+<status status="PASS" start="2024-09-25T11:15:41.029001" elapsed="5.633589"/>
 </suite>
-<status status="FAIL" start="2024-09-24T22:07:22.475811" elapsed="8.463347"/>
+<status status="PASS" start="2024-09-25T11:15:41.027975" elapsed="5.636156"/>
 </suite>
-<status status="FAIL" start="2024-09-24T22:07:22.475811" elapsed="8.465342"/>
+<status status="PASS" start="2024-09-25T11:15:41.026791" elapsed="5.638069"/>
 </suite>
-<status status="FAIL" start="2024-09-24T22:07:22.444567" elapsed="8.497585"/>
+<status status="PASS" start="2024-09-25T11:15:40.985436" elapsed="5.680225"/>
 </suite>
 <statistics>
 <total>
-<stat pass="0" fail="1" skip="0">All Tests</stat>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="0" fail="1" skip="0" id="s1" name="pythonProject">pythonProject</stat>
-<stat pass="0" fail="1" skip="0" id="s1-s1" name="Test">pythonProject.Test</stat>
-<stat pass="0" fail="1" skip="0" id="s1-s1-s1" name="Test">pythonProject.Test.Test</stat>
-<stat pass="0" fail="1" skip="0" id="s1-s1-s1-s1" name="Open Website">pythonProject.Test.Test.Open Website</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="RobotFramework">RobotFramework</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="Test">RobotFramework.Test</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1-s1" name="Test">RobotFramework.Test.Test</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1-s1-s1" name="Open Website">RobotFramework.Test.Test.Open Website</stat>
 </suite>
 </statistics>
 <errors>
