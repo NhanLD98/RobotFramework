@@ -16,7 +16,7 @@ Login To Website
     Input Text    id=horizontal_login_password    ${PASSWORD}
 
     # Nhấn nút đăng nhập
-    Click Button  //*[@class="ant-btn ant-btn-primary"]
+    Click Button  //*[@type="submit"]
     # Chờ đợi trang Dashboard tải xong và kiểm tra sự xuất hiện của văn bản 'Dashboard'
     Wait Until Page Contains    Dashboard    10s
     # Xác minh login thành công
