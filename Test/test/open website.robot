@@ -71,7 +71,7 @@ Login To Website
     #Wait Until Element Does Not Contain    ${TOAST_MSG}    ${TOAST_TEXT}    5s
     #Wait Until Element Does Not Contain    ${TOAST_MSG_DES}    ${TOAST_TEXT_DES}    5s
     Close Browser
-    #TC_5: Login successfully
+    #TC_5: Login successfullys
     Open Browser    ${URL}    chrome
     Maximize Browser Window
         # Nhập username và password

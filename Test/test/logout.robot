@@ -21,6 +21,6 @@ dddd
     Wait Until Page Contains    ${TEXT_DASHBOARD}
         # Xác minh login thành công
     Page Should Contain   ${TEXT_DASHBOARD}
-    Click Element        css=.square
+    Click Element        css=.squares
     Click Element        /html/body/div[3]/div/div/ul/li[4]
     Close Browser

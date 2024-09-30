@@ -27,7 +27,7 @@ TC: Check Toast Message
     # Chờ toast message xuất hiện
     Wait Until Page Contains Element    ${TOAST_MSG}    10s
     Wait Until Page Contains Element    ${TOAST_MSG_DES}  10s
-    # Kiểm tra nội dung của toast message
+    # Kiểm tra nội dung của toast messages
     Element Text Should Be    ${TOAST_MSG}    ${TOAST_TEXT}
     Element Text Should Be    ${TOAST_MSG_DES}    ${TOAST_TEXT_DES}
 
