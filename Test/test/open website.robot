@@ -10,8 +10,8 @@ ${PASSWORD_1}    12345678
 ${TEXT_DASHBOARD}    Dashboard
 ${ENTER_USERNAME}    Please enter Username!
 ${ENTER_PASSWORD}    Please enter password!
-${INVALID_USERNAME}    invalidusername                 # Thay bằng username hợp lệ
-${INVALID_PASSWORD}   12345678           # Thay bằng password hợp lệ
+${INVALID_USERNAME}    invalidusername1
+${INVALID_PASSWORD}   12345678
 ${TOAST_ELEMENT}    //div[text()='Login was failure']
 ${TOAST_ELEMENT_DES}   //div[text()='Username or Password is incorrect.']
 ${TOAST_TEXT}   Login was failure             # Nội dung thông báo toast
@@ -22,11 +22,10 @@ ${LOGIN_FORM}    //div[@class='ant-card-body']
 ${FORGOT_PASSWORD}    //SPAN[text()='Forgot password?']
 ${ACCOUNT_FORGOT_PWD}    //input[@id='username']
 ${BUTTON_SEND_FORGOT}    //button[span[text()='Send']]
-${FORGOT_PWD_SUCCESS}    //*[@class='ant-notification-notice-message']
 ${TOAST_FORGOT_TEXT}    The system has sent the password recovery link to your email address
 *** Test Cases ***
-Login To Website
-    # TC1: log in with empty user name and password
+Testcase 1
+    # TC1: log in with empty user name and passwords
     Open Browser    ${URL}    chrome
     Maximize Browser Window
         # Nhập username và password
@@ -39,6 +38,7 @@ Login To Website
         # Kiểm tra thông báo lỗi cho password trống
     Page Should Contain    ${ENTER_PASSWORD}
     Close Browser
+Testcase 2
     #TC2: Empty with empty password
     Open Browser    ${URL}    chrome
     Maximize Browser Window
@@ -50,6 +50,7 @@ Login To Website
         # Kiểm tra thông báo lỗi cho password trống
     Page Should Contain    ${ENTER_PASSWORD}
     Close Browser
+Testcase 3
     #TC3: Empty with empty username
     Open Browser    ${URL}    chrome
     Maximize Browser Window
@@ -61,6 +62,7 @@ Login To Website
         # Kiểm tra thông báo lỗi cho password trống
     Page Should Contain    ${ENTER_USERNAME}
     Close Browser
+Testcase 4
     #TC4: Login with invalid account
     Open Browser    ${URL}    chrome
     Maximize Browser Window
@@ -77,6 +79,7 @@ Login To Website
     # Nếu cần, có thể chờ toast message biến mất
     #Wait Until Element Does Not Contain    ${TOAST_MSG}    ${TOAST_TEXT}    5s
     Close Browser
+Testcase 5
     #TC_5: Login successfullys
     Open Browser    ${URL}    chrome
     Maximize Browser Window
@@ -90,6 +93,7 @@ Login To Website
         # Xác minh login thành công
     Page Should Contain   ${TEXT_DASHBOARD}
     Close Browser
+Testcase 6
     #TC_6: Logout successfully
     Open Browser    ${URL}    chrome
     Maximize Browser Window
@@ -104,6 +108,7 @@ Login To Website
     Wait Until Element Is Visible    ${LOGIN_FORM}    timeout=10s
     Page Should Contain Element    ${LOGIN_FORM}
     Close Browser
+Testcase 7
     #TC7: Forget password with empty account
     Open Browser    ${URL}    chrome
     Maximize Browser Window
@@ -112,6 +117,7 @@ Login To Website
     Input Text     ${ACCOUNT_FORGOT_PWD}    ${EMPTY}
     Click Button    ${BUTTON_SEND_FORGOT}
     Close Browser
+Testcase 8
     #TC8: Forget password with invalid account
     Open Browser    ${URL}    chrome
     Maximize Browser Window
@@ -120,6 +126,7 @@ Login To Website
     Input Text     ${ACCOUNT_FORGOT_PWD}    ${INVALID_USERNAME}
     Click Button    ${BUTTON_SEND_FORGOT}
     Close Browser
+Testcase 9
     #TC9: Forget password with valid account
     Open Browser    ${URL}    chrome
     Maximize Browser Window
@@ -127,6 +134,6 @@ Login To Website
     Click Element    ${FORGOT_PASSWORD}
     Input Text     ${ACCOUNT_FORGOT_PWD}    ${USERNAME_1}
     Click Button    ${BUTTON_SEND_FORGOT}
-    Wait Until Page Contains    ${TOAST_FORGOT_TEXT}    10s
-    Page should contain     ${TOAST_FORGOT_TEXT}
+    Wait Until Page Contains    ${TOAST_FORGOT_TEXT}       10s
+    Page should contain      ${TOAST_FORGOT_TEXT}
     Close Browser
