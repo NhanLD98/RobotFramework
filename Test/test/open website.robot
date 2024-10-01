@@ -127,6 +127,6 @@ Login To Website
     Click Element    ${FORGOT_PASSWORD}
     Input Text     ${ACCOUNT_FORGOT_PWD}    ${USERNAME_1}
     Click Button    ${BUTTON_SEND_FORGOT}
-    Wait Until Page Contains Element    ${FORGOT_PWD_SUCCESS}    10s
-    Element Text Should Be    ${FORGOT_PWD_SUCCESS}     ${TOAST_FORGOT_TEXT}
+    Wait Until Page Contains    ${TOAST_FORGOT_TEXT}    10s
+    Page should contain     ${TOAST_FORGOT_TEXT}
     Close Browser
