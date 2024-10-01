@@ -1,153 +1,456 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.1 (Python 3.12.6 on win32)" generated="2024-09-30T23:36:14.067332" rpa="false" schemaversion="5">
-<suite id="s1" name="pythonProject" source="C:\Users\TechCare\PycharmProjects\pythonProject">
-<suite id="s1-s1" name="Test" source="C:\Users\TechCare\PycharmProjects\pythonProject\Test">
-<suite id="s1-s1-s1" name="Test" source="C:\Users\TechCare\PycharmProjects\pythonProject\Test\test">
-<suite id="s1-s1-s1-s1" name="Logout" source="C:\Users\TechCare\PycharmProjects\pythonProject\Test\test\logout.robot">
-<test id="s1-s1-s1-s1-t1" name="dddd" line="12">
+<robot generator="Robot 7.1 (Python 3.12.6 on darwin)" generated="2024-10-01T14:43:12.868603" rpa="false" schemaversion="5">
+<suite id="s1" name="RobotFramework" source="/Users/nexroot/Desktop/RobotFramework">
+<suite id="s1-s1" name="Test" source="/Users/nexroot/Desktop/RobotFramework/Test">
+<suite id="s1-s1-s1" name="Test" source="/Users/nexroot/Desktop/RobotFramework/Test/test">
+<suite id="s1-s1-s1-s1" name="Open Website" source="/Users/nexroot/Desktop/RobotFramework/Test/test/open website.robot">
+<test id="s1-s1-s1-s1-t1" name="Login To Website" line="28">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-09-30T23:36:14.301837" level="INFO">Opening browser 'chrome' to base url 'https://beahub-web-v1006.devcaprover.nexlesoft.com/'.</msg>
+<msg time="2024-10-01T14:43:13.199418" level="INFO">Opening browser 'chrome' to base url 'https://beahub-web-v1006.devcaprover.nexlesoft.com/'.</msg>
 <arg>${URL}</arg>
 <arg>chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-09-30T23:36:14.301837" elapsed="4.164357"/>
+<status status="PASS" start="2024-10-01T14:43:13.199119" elapsed="7.774871"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2024-09-30T23:36:18.467191" elapsed="0.026912"/>
+<status status="PASS" start="2024-10-01T14:43:20.975060" elapsed="0.543765"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-09-30T23:36:18.495094" level="INFO">Typing text 'merchantowner' into text field 'id=horizontal_login_username'.</msg>
+<msg time="2024-10-01T14:43:21.522779" level="INFO">Typing text '' into text field 'id=horizontal_login_username'.</msg>
+<arg>${USERNAME_ELE}</arg>
+<arg>${EMPTY}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-01T14:43:21.519382" elapsed="0.169526"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-10-01T14:43:21.689845" level="INFO">Typing text '' into text field 'id=horizontal_login_password'.</msg>
+<arg>${PASSWORD_ELE}</arg>
+<arg>${EMPTY}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-01T14:43:21.689161" elapsed="0.066648"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-10-01T14:43:21.756345" level="INFO">Clicking button '//*[@type="submit"]'.</msg>
+<arg>${LOGIN_BTN}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-01T14:43:21.756078" elapsed="0.137530"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2024-10-01T14:43:21.931529" level="INFO">Current page contains text 'Please enter Username!'.</msg>
+<arg>${ENTER_USERNAME}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2024-10-01T14:43:21.894042" elapsed="0.037701"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2024-10-01T14:43:21.949156" level="INFO">Current page contains text 'Please enter password!'.</msg>
+<arg>${ENTER_PASSWORD}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2024-10-01T14:43:21.932050" elapsed="0.017246"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-10-01T14:43:21.949578" elapsed="0.100768"/>
+</kw>
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-10-01T14:43:22.050994" level="INFO">Opening browser 'chrome' to base url 'https://beahub-web-v1006.devcaprover.nexlesoft.com/'.</msg>
+<arg>${URL}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-10-01T14:43:22.050638" elapsed="3.987076"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-10-01T14:43:26.038869" elapsed="0.386047"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-10-01T14:43:26.427233" level="INFO">Typing text 'merchantowner' into text field 'id=horizontal_login_username'.</msg>
 <arg>${USERNAME_ELE}</arg>
 <arg>${USERNAME_1}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-09-30T23:36:18.495094" elapsed="0.183583"/>
+<status status="PASS" start="2024-10-01T14:43:26.425372" elapsed="0.284093"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-09-30T23:36:18.679674" level="INFO">Typing text '12345678' into text field 'id=horizontal_login_password'.</msg>
+<msg time="2024-10-01T14:43:26.710956" level="INFO">Typing text '' into text field 'id=horizontal_login_password'.</msg>
+<arg>${PASSWORD_ELE}</arg>
+<arg>${EMPTY}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-01T14:43:26.709750" elapsed="0.082775"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-10-01T14:43:26.793260" level="INFO">Clicking button '//*[@type="submit"]'.</msg>
+<arg>${LOGIN_BTN}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-01T14:43:26.792925" elapsed="0.108706"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2024-10-01T14:43:26.931576" level="INFO">Current page contains text 'Please enter password!'.</msg>
+<arg>${ENTER_PASSWORD}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2024-10-01T14:43:26.901944" elapsed="0.029791"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-10-01T14:43:26.932121" elapsed="0.120086"/>
+</kw>
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-10-01T14:43:27.053412" level="INFO">Opening browser 'chrome' to base url 'https://beahub-web-v1006.devcaprover.nexlesoft.com/'.</msg>
+<arg>${URL}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-10-01T14:43:27.052917" elapsed="4.271753"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-10-01T14:43:31.325594" elapsed="0.406520"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-10-01T14:43:31.734382" level="INFO">Typing text '' into text field 'id=horizontal_login_username'.</msg>
+<arg>${USERNAME_ELE}</arg>
+<arg>${EMPTY}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-01T14:43:31.732772" elapsed="0.202211"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-10-01T14:43:31.935617" level="INFO">Typing text '12345678' into text field 'id=horizontal_login_password'.</msg>
 <arg>${PASSWORD_ELE}</arg>
 <arg>${PASSWORD_1}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-09-30T23:36:18.679674" elapsed="0.167190"/>
+<status status="PASS" start="2024-10-01T14:43:31.935283" elapsed="0.246030"/>
 </kw>
 <kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2024-09-30T23:36:18.847860" level="INFO">Clicking button '//*[@type="submit"]'.</msg>
+<msg time="2024-10-01T14:43:32.182214" level="INFO">Clicking button '//*[@type="submit"]'.</msg>
 <arg>${LOGIN_BTN}</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2024-09-30T23:36:18.847860" elapsed="0.115653"/>
+<status status="PASS" start="2024-10-01T14:43:32.181771" elapsed="0.109382"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2024-10-01T14:43:32.317650" level="INFO">Current page contains text 'Please enter Username!'.</msg>
+<arg>${ENTER_USERNAME}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2024-10-01T14:43:32.291466" elapsed="0.026407"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-10-01T14:43:32.318259" elapsed="0.124956"/>
+</kw>
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-10-01T14:43:32.444395" level="INFO">Opening browser 'chrome' to base url 'https://beahub-web-v1006.devcaprover.nexlesoft.com/'.</msg>
+<arg>${URL}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-10-01T14:43:32.443915" elapsed="3.980730"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-10-01T14:43:36.425585" elapsed="0.406477"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-10-01T14:43:36.833355" level="INFO">Typing text 'invalidusername' into text field 'id=horizontal_login_username'.</msg>
+<arg>${USERNAME_ELE}</arg>
+<arg>${INVALID_USERNAME}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-01T14:43:36.832742" elapsed="0.393973"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-10-01T14:43:37.227383" level="INFO">Typing text '12345678' into text field 'id=horizontal_login_password'.</msg>
+<arg>${PASSWORD_ELE}</arg>
+<arg>${INVALID_PASSWORD}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-01T14:43:37.227054" elapsed="0.162499"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-10-01T14:43:37.390455" level="INFO">Clicking button '//*[@type="submit"]'.</msg>
+<arg>${LOGIN_BTN}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-01T14:43:37.389999" elapsed="0.132218"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${TOAST_ELEMENT}</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-10-01T14:43:37.522730" elapsed="0.262028"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${TOAST_ELEMENT_DES}</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-10-01T14:43:37.785354" elapsed="0.015611"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2024-10-01T14:43:37.810135" level="INFO">Current page contains element '//div[text()='Login was failure']'.</msg>
+<arg>${TOAST_ELEMENT}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2024-10-01T14:43:37.801270" elapsed="0.009098"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2024-10-01T14:43:37.822091" level="INFO">Current page contains element '//div[text()='Username or Password is incorrect.']'.</msg>
+<arg>${TOAST_ELEMENT_DES}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2024-10-01T14:43:37.810749" elapsed="0.011526"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-10-01T14:43:37.822563" elapsed="0.130355"/>
+</kw>
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-10-01T14:43:37.953912" level="INFO">Opening browser 'chrome' to base url 'https://beahub-web-v1006.devcaprover.nexlesoft.com/'.</msg>
+<arg>${URL}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-10-01T14:43:37.953424" elapsed="3.909279"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-10-01T14:43:41.863765" elapsed="0.386646"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-10-01T14:43:42.251714" level="INFO">Typing text 'merchantowner' into text field 'id=horizontal_login_username'.</msg>
+<arg>${USERNAME_ELE}</arg>
+<arg>${USERNAME_1}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-01T14:43:42.250878" elapsed="0.400175"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-10-01T14:43:42.652028" level="INFO">Typing text '12345678' into text field 'id=horizontal_login_password'.</msg>
+<arg>${PASSWORD_ELE}</arg>
+<arg>${PASSWORD_1}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-01T14:43:42.651542" elapsed="0.150548"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-10-01T14:43:42.802833" level="INFO">Clicking button '//*[@type="submit"]'.</msg>
+<arg>${LOGIN_BTN}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-01T14:43:42.802422" elapsed="0.129882"/>
 </kw>
 <kw name="Wait Until Page Contains" owner="SeleniumLibrary">
 <arg>${TEXT_DASHBOARD}</arg>
 <doc>Waits until ``text`` appears on the current page.</doc>
-<status status="PASS" start="2024-09-30T23:36:18.966496" elapsed="0.890228"/>
+<status status="PASS" start="2024-10-01T14:43:42.932619" elapsed="0.453374"/>
 </kw>
 <kw name="Page Should Contain" owner="SeleniumLibrary">
-<msg time="2024-09-30T23:36:19.875246" level="INFO">Current page contains text 'Dashboard'.</msg>
+<msg time="2024-10-01T14:43:43.398498" level="INFO">Current page contains text 'Dashboard'.</msg>
 <arg>${TEXT_DASHBOARD}</arg>
 <doc>Verifies that current page contains ``text``.</doc>
-<status status="PASS" start="2024-09-30T23:36:19.857725" elapsed="0.017521"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-09-30T23:36:19.876238" level="INFO">Clicking element 'css=.square'.</msg>
-<msg time="2024-09-30T23:36:20.105234" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-14.png"&gt;&lt;img src="selenium-screenshot-14.png" width="800px"&gt;&lt;/a&gt;</msg>
-<msg time="2024-09-30T23:36:20.105234" level="FAIL">ElementNotInteractableException: Message: element not interactable
-  (Session info: chrome=129.0.6668.60)
-Stacktrace:
-	GetHandleVerifier [0x00007FF79EAAB125+29573]
-	(No symbol) [0x00007FF79EA1FF50]
-	(No symbol) [0x00007FF79E8DB519]
-	(No symbol) [0x00007FF79E930C8F]
-	(No symbol) [0x00007FF79E9236BE]
-	(No symbol) [0x00007FF79E9572FA]
-	(No symbol) [0x00007FF79E922FF6]
-	(No symbol) [0x00007FF79E957510]
-	(No symbol) [0x00007FF79E9786BC]
-	(No symbol) [0x00007FF79E9570A3]
-	(No symbol) [0x00007FF79E9212DF]
-	(No symbol) [0x00007FF79E922441]
-	GetHandleVerifier [0x00007FF79EDDC76D+3377613]
-	GetHandleVerifier [0x00007FF79EE27B67+3685831]
-	GetHandleVerifier [0x00007FF79EE1CF8B+3641835]
-	GetHandleVerifier [0x00007FF79EB6B2A6+816390]
-	(No symbol) [0x00007FF79EA2B25F]
-	(No symbol) [0x00007FF79EA27084]
-	(No symbol) [0x00007FF79EA27220]
-	(No symbol) [0x00007FF79EA1607F]
-	BaseThreadInitThunk [0x00007FF950757C24+20]
-	RtlUserThreadStart [0x00007FF95136D721+33]
-</msg>
-<arg>css=.square</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="FAIL" start="2024-09-30T23:36:19.876238" elapsed="0.231988">ElementNotInteractableException: Message: element not interactable
-  (Session info: chrome=129.0.6668.60)
-Stacktrace:
-	GetHandleVerifier [0x00007FF79EAAB125+29573]
-	(No symbol) [0x00007FF79EA1FF50]
-	(No symbol) [0x00007FF79E8DB519]
-	(No symbol) [0x00007FF79E930C8F]
-	(No symbol) [0x00007FF79E9236BE]
-	(No symbol) [0x00007FF79E9572FA]
-	(No symbol) [0x00007FF79E922FF6]
-	(No symbol) [0x00007FF79E957510]
-	(No symbol) [0x00007FF79E9786BC]
-	(No symbol) [0x00007FF79E9570A3]
-	(No symbol) [0x00007FF79E9212DF]
-	(No symbol) [0x00007FF79E922441]
-	GetHandleVerifier [0x00007FF79EDDC76D+3377613]
-	GetHandleVerifier [0x00007FF79EE27B67+3685831]
-	GetHandleVerifier [0x00007FF79EE1CF8B+3641835]
-	GetHandleVerifier [0x00007FF79EB6B2A6+816390]
-	(No symbol) [0x00007FF79EA2B25F]
-	(No symbol) [0x00007FF79EA27084]
-	(No symbol) [0x00007FF79EA27220]
-	(No symbol) [0x00007FF79EA1607F]
-	BaseThreadInitThunk [0x00007FF950757C24+20]
-	RtlUserThreadStart [0x00007FF95136D721+33]
-</status>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<arg>/html/body/div[3]/div/div/ul/li[4]</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="NOT RUN" start="2024-09-30T23:36:20.109223" elapsed="0.000000"/>
+<status status="PASS" start="2024-10-01T14:43:43.386296" elapsed="0.012306"/>
 </kw>
 <kw name="Close Browser" owner="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="NOT RUN" start="2024-09-30T23:36:20.109223" elapsed="0.000000"/>
+<status status="PASS" start="2024-10-01T14:43:43.398839" elapsed="0.126567"/>
 </kw>
-<status status="FAIL" start="2024-09-30T23:36:14.301837" elapsed="5.808422">ElementNotInteractableException: Message: element not interactable
-  (Session info: chrome=129.0.6668.60)
-Stacktrace:
-	GetHandleVerifier [0x00007FF79EAAB125+29573]
-	(No symbol) [0x00007FF79EA1FF50]
-	(No symbol) [0x00007FF79E8DB519]
-	(No symbol) [0x00007FF79E930C8F]
-	(No symbol) [0x00007FF79E9236BE]
-	(No symbol) [0x00007FF79E9572FA]
-	(No symbol) [0x00007FF79E922FF6]
-	(No symbol) [0x00007FF79E957510]
-	(No symbol) [0x00007FF79E9786BC]
-	(No symbol) [0x00007FF79E9570A3]
-	(No symbol) [0x00007FF79E9212DF]
-	(No symbol) [0x00007FF79E922441]
-	GetHandleVerifier [0x00007FF79EDDC76D+3377613]
-	GetHandleVerifier [0x00007FF79EE27B67+3685831]
-	GetHandleVerifier [0x00007FF79EE1CF8B+3641835]
-	GetHandleVerifier [0x00007FF79EB6B2A6+816390]
-	(No symbol) [0x00007FF79EA2B25F]
-	(No symbol) [0x00007FF79EA27084]
-	(No symbol) [0x00007FF79EA27220]
-	(No symbol) [0x00007FF79EA1607F]
-	BaseThreadInitThunk [0x00007FF950757C24+20]
-	RtlUserThreadStart [0x00007FF95136D721+33]
-</status>
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-10-01T14:43:43.526194" level="INFO">Opening browser 'chrome' to base url 'https://beahub-web-v1006.devcaprover.nexlesoft.com/'.</msg>
+<arg>${URL}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-10-01T14:43:43.525858" elapsed="4.001798"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-10-01T14:43:47.528856" elapsed="0.386501"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-10-01T14:43:47.917294" level="INFO">Typing text 'merchantowner' into text field 'id=horizontal_login_username'.</msg>
+<arg>${USERNAME_ELE}</arg>
+<arg>${USERNAME_1}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-01T14:43:47.916067" elapsed="0.399655"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-10-01T14:43:48.316512" level="INFO">Typing text '12345678' into text field 'id=horizontal_login_password'.</msg>
+<arg>${PASSWORD_ELE}</arg>
+<arg>${PASSWORD_1}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-01T14:43:48.316170" elapsed="0.153654"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-10-01T14:43:48.470429" level="INFO">Clicking button '//*[@type="submit"]'.</msg>
+<arg>${LOGIN_BTN}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-01T14:43:48.470127" elapsed="0.128099"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${PROFILE}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-10-01T14:43:48.598986" elapsed="0.703967"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-10-01T14:43:49.303530" level="INFO">Clicking element '//*[@class='square']'.</msg>
+<arg>${PROFILE}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-01T14:43:49.303248" elapsed="0.048565"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${LOG_OUT}</arg>
+<arg>timeout=5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-10-01T14:43:49.352205" elapsed="0.285561"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-10-01T14:43:49.638332" level="INFO">Clicking element 'xpath=//span[text()='Log out']'.</msg>
+<arg>${LOG_OUT}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-01T14:43:49.638050" elapsed="0.121476"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${LOGIN_FORM}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-10-01T14:43:49.760214" elapsed="0.025203"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2024-10-01T14:43:49.801133" level="INFO">Current page contains element '//div[@class='ant-card-body']'.</msg>
+<arg>${LOGIN_FORM}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2024-10-01T14:43:49.785774" elapsed="0.015531"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-10-01T14:43:49.801999" elapsed="0.180992"/>
+</kw>
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-10-01T14:43:49.983887" level="INFO">Opening browser 'chrome' to base url 'https://beahub-web-v1006.devcaprover.nexlesoft.com/'.</msg>
+<arg>${URL}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-10-01T14:43:49.983417" elapsed="4.181488"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-10-01T14:43:54.165913" elapsed="0.421160"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${FORGOT_PASSWORD}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-10-01T14:43:54.587684" elapsed="0.030790"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-10-01T14:43:54.619190" level="INFO">Clicking element '//SPAN[text()='Forgot password?']'.</msg>
+<arg>${FORGOT_PASSWORD}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-01T14:43:54.618785" elapsed="0.080045"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-10-01T14:43:54.700417" level="INFO">Typing text '' into text field '//input[@id='username']'.</msg>
+<arg>${ACCOUNT_FORGOT_PWD}</arg>
+<arg>${EMPTY}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-01T14:43:54.699329" elapsed="0.173406"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-10-01T14:43:54.873800" level="INFO">Clicking button '//*[@class='ant-btn save-button ant-btn-primary']'.</msg>
+<arg>${BUTTON_SEND_FORGOT}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-01T14:43:54.873436" elapsed="0.164886"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-10-01T14:43:55.038858" elapsed="0.129243"/>
+</kw>
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-10-01T14:43:55.169124" level="INFO">Opening browser 'chrome' to base url 'https://beahub-web-v1006.devcaprover.nexlesoft.com/'.</msg>
+<arg>${URL}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-10-01T14:43:55.168660" elapsed="4.105742"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-10-01T14:43:59.275302" elapsed="0.406918"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${FORGOT_PASSWORD}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-10-01T14:43:59.682622" elapsed="0.029750"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-10-01T14:43:59.713083" level="INFO">Clicking element '//SPAN[text()='Forgot password?']'.</msg>
+<arg>${FORGOT_PASSWORD}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-01T14:43:59.712728" elapsed="0.064479"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-10-01T14:43:59.777749" level="INFO">Typing text 'invalidusername' into text field '//input[@id='username']'.</msg>
+<arg>${ACCOUNT_FORGOT_PWD}</arg>
+<arg>${INVALID_USERNAME}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-01T14:43:59.777456" elapsed="0.375145"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-10-01T14:44:00.153270" level="INFO">Clicking button '//*[@class='ant-btn save-button ant-btn-primary']'.</msg>
+<arg>${BUTTON_SEND_FORGOT}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-01T14:44:00.152918" elapsed="0.094914"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-10-01T14:44:00.248259" elapsed="0.128925"/>
+</kw>
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-10-01T14:44:00.378794" level="INFO">Opening browser 'chrome' to base url 'https://beahub-web-v1006.devcaprover.nexlesoft.com/'.</msg>
+<arg>${URL}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-10-01T14:44:00.377851" elapsed="4.107144"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-10-01T14:44:04.485834" elapsed="0.399920"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${FORGOT_PASSWORD}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-10-01T14:44:04.886098" elapsed="0.045323"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-10-01T14:44:04.932051" level="INFO">Clicking element '//SPAN[text()='Forgot password?']'.</msg>
+<arg>${FORGOT_PASSWORD}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-01T14:44:04.931731" elapsed="0.076716"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-10-01T14:44:05.009104" level="INFO">Typing text 'merchantowner' into text field '//input[@id='username']'.</msg>
+<arg>${ACCOUNT_FORGOT_PWD}</arg>
+<arg>${USERNAME_1}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-01T14:44:05.008745" elapsed="0.378513"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-10-01T14:44:05.388837" level="FAIL">Variable '${BUTTON_SEND}' not found.</msg>
+<arg>${BUTTON_SEND}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="FAIL" start="2024-10-01T14:44:05.387587" elapsed="0.001334">Variable '${BUTTON_SEND}' not found.</status>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${FORGOT_PWD_SUCCESS}</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="NOT RUN" start="2024-10-01T14:44:05.389187" elapsed="0.000046"/>
+</kw>
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<arg>${FORGOT_PWD_SUCCESS}</arg>
+<arg>${TOAST_FORGOT_TEXT}</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="NOT RUN" start="2024-10-01T14:44:05.389468" elapsed="0.000042"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="NOT RUN" start="2024-10-01T14:44:05.389690" elapsed="0.000039"/>
+</kw>
+<status status="FAIL" start="2024-10-01T14:43:13.198011" elapsed="52.192179">Variable '${BUTTON_SEND}' not found.</status>
 </test>
-<status status="FAIL" start="2024-09-30T23:36:14.098612" elapsed="6.013602"/>
+<status status="FAIL" start="2024-10-01T14:43:12.922214" elapsed="52.468824"/>
 </suite>
-<status status="FAIL" start="2024-09-30T23:36:14.098612" elapsed="6.014600"/>
+<status status="FAIL" start="2024-10-01T14:43:12.921223" elapsed="52.470748"/>
 </suite>
-<status status="FAIL" start="2024-09-30T23:36:14.098612" elapsed="6.015597"/>
+<status status="FAIL" start="2024-10-01T14:43:12.920070" elapsed="52.473332"/>
 </suite>
-<status status="FAIL" start="2024-09-30T23:36:14.067332" elapsed="6.048872"/>
+<status status="FAIL" start="2024-10-01T14:43:12.870426" elapsed="52.524495"/>
 </suite>
 <statistics>
 <total>
@@ -156,10 +459,10 @@ Stacktrace:
 <tag>
 </tag>
 <suite>
-<stat pass="0" fail="1" skip="0" id="s1" name="pythonProject">pythonProject</stat>
-<stat pass="0" fail="1" skip="0" id="s1-s1" name="Test">pythonProject.Test</stat>
-<stat pass="0" fail="1" skip="0" id="s1-s1-s1" name="Test">pythonProject.Test.Test</stat>
-<stat pass="0" fail="1" skip="0" id="s1-s1-s1-s1" name="Logout">pythonProject.Test.Test.Logout</stat>
+<stat pass="0" fail="1" skip="0" id="s1" name="RobotFramework">RobotFramework</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1" name="Test">RobotFramework.Test</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1-s1" name="Test">RobotFramework.Test.Test</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1-s1-s1" name="Open Website">RobotFramework.Test.Test.Open Website</stat>
 </suite>
 </statistics>
 <errors>

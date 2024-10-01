@@ -1,6 +1,5 @@
 *** Settings ***
 Library    SeleniumLibrary
-
 *** Variables ***
 ${URL}    https://beahub-web-v1006.devcaprover.nexlesoft.com/
 ${USERNAME_ELE}    id=horizontal_login_username
@@ -11,12 +10,20 @@ ${PASSWORD_1}    12345678
 ${TEXT_DASHBOARD}    Dashboard
 ${ENTER_USERNAME}    Please enter Username!
 ${ENTER_PASSWORD}    Please enter password!
-${INVALID_USERNAME}    123abc                 # Thay bằng username hợp lệ
+${INVALID_USERNAME}    invalidusername                 # Thay bằng username hợp lệ
 ${INVALID_PASSWORD}   12345678           # Thay bằng password hợp lệ
-${TOAST_MSG}    css=.ant-notification-notice-message
-${TOAST_MSG_DES}   css=.ant-notification-notice-description
+${TOAST_ELEMENT}    //div[text()='Login was failure']
+${TOAST_ELEMENT_DES}   //div[text()='Username or Password is incorrect.']
 ${TOAST_TEXT}   Login was failure             # Nội dung thông báo toast
 ${TOAST_TEXT_DES}    Username or Password is incorrect.
+${PROFILE}    //*[@class='square']
+${LOG_OUT}    xpath=//span[text()='Log out']
+${LOGIN_FORM}    //div[@class='ant-card-body']
+${FORGOT_PASSWORD}    //SPAN[text()='Forgot password?']
+${ACCOUNT_FORGOT_PWD}    //input[@id='username']
+${BUTTON_SEND_FORGOT}    //*[@class='ant-btn save-button ant-btn-primary']
+${FORGOT_PWD_SUCCESS}    //*[@class='ant-notification-notice-message']
+${TOAST_FORGOT_TEXT}    The system has sent the password recovery link to your email address
 *** Test Cases ***
 Login To Website
     # TC1: log in with empty user name and password
@@ -62,14 +69,13 @@ Login To Website
     Input Text    ${PASSWORD_ELE}    ${INVALID_PASSWORD}
     Click Button  ${LOGIN_BTN}
     # Chờ toast message xuất hiện
-    Wait Until Page Contains Element    ${TOAST_MSG}    10s
-    Wait Until Page Contains Element    ${TOAST_MSG_DES}  10s
+    Wait Until Page Contains Element    ${TOAST_ELEMENT}    10s
+    Wait Until Page Contains Element    ${TOAST_ELEMENT_DES}  10s
     # Kiểm tra nội dung của toast message
-    Element Text Should Be    ${TOAST_MSG}    ${TOAST_TEXT}
-    Element Text Should Be    ${TOAST_MSG_DES}    ${TOAST_TEXT_DES}
+    Page Should Contain Element     ${TOAST_ELEMENT}
+    Page Should Contain Element     ${TOAST_ELEMENT_DES}
     # Nếu cần, có thể chờ toast message biến mất
     #Wait Until Element Does Not Contain    ${TOAST_MSG}    ${TOAST_TEXT}    5s
-    #Wait Until Element Does Not Contain    ${TOAST_MSG_DES}    ${TOAST_TEXT_DES}    5s
     Close Browser
     #TC_5: Login successfullys
     Open Browser    ${URL}    chrome
@@ -83,5 +89,44 @@ Login To Website
     Wait Until Page Contains    ${TEXT_DASHBOARD}
         # Xác minh login thành công
     Page Should Contain   ${TEXT_DASHBOARD}
-
+    Close Browser
+    #TC_6: Logout successfully
+    Open Browser    ${URL}    chrome
+    Maximize Browser Window
+        # Nhập username và password
+    Input Text    ${USERNAME_ELE}    ${USERNAME_1}
+    Input Text    ${PASSWORD_ELE}    ${PASSWORD_1}
+    Click Button  ${LOGIN_BTN}
+    Wait Until Element Is Visible    ${PROFILE}    timeout=10s
+    Click Element    ${PROFILE}
+    Wait Until Element Is Visible    ${LOG_OUT}    timeout=5s
+    Click Element    ${LOG_OUT}
+    Wait Until Element Is Visible    ${LOGIN_FORM}    timeout=10s
+    Page Should Contain Element    ${LOGIN_FORM}
+    Close Browser
+    #TC7: Forget password with empty account
+    Open Browser    ${URL}    chrome
+    Maximize Browser Window
+    Wait Until Element Is Visible    ${FORGOT_PASSWORD}   timeout=10s
+    Click Element    ${FORGOT_PASSWORD}
+    Input Text     ${ACCOUNT_FORGOT_PWD}    ${EMPTY}
+    Click Button    ${BUTTON_SEND_FORGOT}
+    Close Browser
+    #TC8: Forget password with invalid account
+    Open Browser    ${URL}    chrome
+    Maximize Browser Window
+    Wait Until Element Is Visible    ${FORGOT_PASSWORD}   timeout=10s
+    Click Element    ${FORGOT_PASSWORD}
+    Input Text     ${ACCOUNT_FORGOT_PWD}    ${INVALID_USERNAME}
+    Click Button    ${BUTTON_SEND_FORGOT}
+    Close Browser
+    #TC9: Forget password with valid account
+    Open Browser    ${URL}    chrome
+    Maximize Browser Window
+    Wait Until Element Is Visible    ${FORGOT_PASSWORD}   timeout=10s
+    Click Element    ${FORGOT_PASSWORD}
+    Input Text     ${ACCOUNT_FORGOT_PWD}    ${USERNAME_1}
+    Click Button    ${BUTTON_SEND_FORGOT}
+    Wait Until Page Contains Element    ${FORGOT_PWD_SUCCESS}    10s
+    Element Text Should Be    ${FORGOT_PWD_SUCCESS}     ${TOAST_FORGOT_TEXT}
     Close Browser
