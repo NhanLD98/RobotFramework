@@ -4,7 +4,7 @@ Library    SeleniumLibrary
 ${URL}    https://beahub-web-v1006.devcaprover.nexlesoft.com/
 ${USERNAME_ELE}    id=horizontal_login_username
 ${PASSWORD_ELE}    id=horizontal_login_password
-${LOGIN_BTN}    //*[@type="submit"]
+${LOGIN_BTN}    //button[span[text()='Login']]
 ${USERNAME_1}    merchantowner
 ${PASSWORD_1}    12345678
 ${TEXT_DASHBOARD}    Dashboard
@@ -21,7 +21,7 @@ ${LOG_OUT}    xpath=//span[text()='Log out']
 ${LOGIN_FORM}    //div[@class='ant-card-body']
 ${FORGOT_PASSWORD}    //SPAN[text()='Forgot password?']
 ${ACCOUNT_FORGOT_PWD}    //input[@id='username']
-${BUTTON_SEND_FORGOT}    //*[@class='ant-btn save-button ant-btn-primary']
+${BUTTON_SEND_FORGOT}    //button[span[text()='Send']]
 ${FORGOT_PWD_SUCCESS}    //*[@class='ant-notification-notice-message']
 ${TOAST_FORGOT_TEXT}    The system has sent the password recovery link to your email address
 *** Test Cases ***
